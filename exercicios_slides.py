@@ -45,6 +45,33 @@ def slide121():
  
     print(empresa["endereco"]["cidade"])
 
+def slide122():
+    print("Slide 122: Exercício - Percorrendo lista de dicionários com for")
+    alunos = [
+        {"nome": "Ana", "nota": 8.5},
+        {"nome": "Bruno", "nota": 6.0}
+    ]
+    
+    for aluno in alunos:
+        if aluno["nota"] >= 7:
+            print(aluno["nome"], "foi aprovado")
+        else:
+            print(aluno["nome"], "foi reprovado")
+
+def slide126():
+    print("Slide 126: Exercício - Agenda de contatos com listas e dicionários")
+    contatos = []
+ 
+    def adicionar(nome, telefone):
+        contatos.append({"nome": nome, "telefone": telefone})
+ 
+    adicionar("Ana", "48 9999-0001")
+    adicionar("Bruno", "48 9999-0002")
+    
+    for contato in contatos:
+        print(contato["nome"], "-", contato["telefone"])
+
+
 # menu para escolher exercício
 def exercicio_slides():
     while True:
@@ -55,7 +82,9 @@ def exercicio_slides():
         print("4. Slide 115 - Dicionários")
         print("5. Slide 120 - Dicionários com listas")
         print("6. Slide 121 - Dicionários aninhados")
-        print("7. Sair")
+        print("7. Slide 122 - Percorrendo lista de dicionários com for")
+        print("8. Slide 126 - Agenda de contatos com listas e dicionários")
+        print("9. Sair")
 
         opcao = input("Digite o número do exercício desejado: ")
 
@@ -73,6 +102,10 @@ def exercicio_slides():
         elif opcao == "6":
             slide121()
         elif opcao == "7":
+            slide122()
+        elif opcao == "8":
+            slide126()
+        elif opcao == "9":
             print("Saindo do programa.")
             break
         else:
